@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><%= pageTitle %></title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+    <nav class="main-header__nav">
+        <ul class="main-header__list">
+            <li>
+                <a class="<%= path === '/' ? 'active' : '' %>" href="/">Home</a>
+            </li>
+            <li>
+                <a class="<%= path === '/questions' ? 'active' : '' %>"href="/questions">Questionnaire</a>
+            </li>
+
+        </ul>
+    </nav>
+    <main>
+        <form class="questions-form", action="/questions", method="POST">
+            <div class="questions-form__control">
+                <label for="q1">1.What is your age range? </label>
+                <input type="number", id="q1", name="q1">
+            </div>
+            <div class="questions-form__control">
+                <label for="q2">2.What is </label>
+                <input type="number", id="q1", name="q1">
+            </div>
+            <div class="questions-form__control">
+                <label for="q3">3.Have you travelled recently? </label>
+                <input type="number", id="q3", name="q3">
+            </div>
+            
+            <button class="btn" type="submit">Submit</button>
+        </form>
+    </main>
+</body>
+</html>

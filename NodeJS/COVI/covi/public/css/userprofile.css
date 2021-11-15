@@ -1,0 +1,39 @@
+.user-profile {
+    position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  }
+.user-profile__name__div,
+.user-profile__dob__div,
+.user-profile__email__div {
+    margin: 1rem 0;
+}
+
+.user-profile__name label,
+.user-profile__dob label,
+.user-profile__email label,
+.user-profile__email label
+.user-profile__name p,
+.user-profile__dob p,
+.user-profile__email p,
+.user-profile__email p,
+.user-profile__riskmeter__div,
+.user-profile__riskmeter p{
+    display: block;
+    width: 100%;
+    margin-bottom: 0.25rem;
+   /* border: 1px solid #a1a1a1;*/
+    font: inherit;
+    border-radius: 2px;
+}
+
+.form-control {
+    /*border: 1px solid #a1a1a1;*/
+    font: inherit;
+    border-radius: 2px;
+}
+
+.form-control input:focus {
+    outline-color: #00695c;
+}

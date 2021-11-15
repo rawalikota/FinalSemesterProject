@@ -1,0 +1,81 @@
+<%- include('includes/head.ejs') %>
+    <link rel="stylesheet" href="/css/forms.css">
+    <link rel="stylesheet" href="/css/product.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <nav class="main-header__nav">
+            <ul class="main-header__item-list">
+                <li class="main-header__item"><a  href="/">Home</a></li>
+                <li class="main-header__item"><a  href="/questions">Questions</a></li>
+            </ul>
+            
+            
+            <ul class="main-header__item-list">
+
+                <li class="main-header__item">
+                    <a href="/logout">Logout</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <form class="product-form" action="/questions" method="POST">
+            <div class="form-control">
+                <h3>Please answer the following questions to know your COVID-19 Riskmeter by filling the input field with '1', '2' or '3'. </h3>
+                <label for="questionone">1.What is your age? 
+                    <p>1) 12-25</p>
+                    <p>2) 25-40</p>
+                    <p>3) 40-100</p>
+                </label>
+                <input type="number" name="questionone" id="questionone" min="1" max="3">
+            </div>
+            <div class="form-control">
+                <label for="questiontwo">2.Have you ever travelled in last 14 days?
+                    <p>1) No</p>
+                    <p>2) Yes</p>
+                </label>
+                <input type="number" name="questiontwo" id="questiontwo" min="1" max="2" >
+            </div>
+            <div class="form-control">
+                <label for="questionthree">3.Have you been in contact with any person who has been deteced as Covid-19 positive?
+                    <p>1) No</p>
+                    <p>2) I don't know</p>
+                    <p>3) Yes</p>
+                </label>
+                <input type="number" name="questionthree" id="questionthree" min="1" max="3" >
+            </div>
+            <div class="form-control">
+                <label for="questionfour">4.Do you have any of the following symptoms:Dry Cough, Sneezing, Sore throat, Runny Nose, Stomach Pains, Diarrhea,
+                    weakness?
+                    <p>1) No</p>
+                    <p>2) Mild Symptoms</p>
+                    <p>3) Severe Symptoms</p>
+                </label>
+                <input type="number" name="questionfour" id="questionfour" min="1" max="3" >
+            </div>
+            <div class="form-control">
+                <label for="questionfive">5.Do you experience extreme difficulty in breathing?
+                    <p>1) No</p>
+                    <p>2) Mild Symptoms</p>
+                    <p>3) Severe Symptoms</p>
+                </label>
+                <input type="number" name="questionfive" id="questionfive" min="1" max="3" >
+            </div>
+            <div class="form-control">
+                <label for="questionsix">6.Do you have any signs of low blood pressure(too weak to stand, dizziness, lightheaded, feeling cold, pale)?
+                    <p>1) Never</p>
+                    <p>2) Sometimes</p>
+                    <p>3) Always</p>
+                </label>
+                <input type="number" name="questionsix" id="questionsix" min="1" max="3" >
+            </div>
+
+            <button class="btn" type="submit" >Submit Form</button>
+                <input type="hidden" name="riskmeter" id="riskmeter">
+        </form>
+    </main>
+    
+<%- include('includes/end.ejs') %>

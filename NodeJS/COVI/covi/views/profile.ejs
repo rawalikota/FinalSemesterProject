@@ -1,0 +1,58 @@
+<%- include('includes/head.ejs') %>
+    <link rel="stylesheet" href="/css/forms.css">
+    <link rel="stylesheet" href="/css/product.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <nav class="main-header__nav">
+            <ul class="main-header__item-list">
+                <li class="main-header__item"><a  href="/">Home</a></li>
+                <li class="main-header__item"><a  href="/profile">Profile</a></li>
+            </ul>
+    
+            
+            <ul class="main-header__item-list">
+                
+                <li class="main-header__item">
+                    <a href="/logout">Logout</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="product-form">
+            <h1>Your Profile</h1>
+            
+            <article class="user-profile__article">
+                <div class="user-profile__name__div">
+                    <label>Name:</label>
+                    <h4 class="user-profile__name"> <%= riskmeter[riskmeter.length-1].uname %> </h4>
+                </div>
+                <div class="user-profile__dob__div">
+                    <label>DOB:</label>
+                    <h4 class="user-profile__dob"><%= riskmeter[(riskmeter.length)-1].dob %></h4>
+                </div>
+                <div class="user-profile__email__div">
+                    <label>E-mail Id:</label>
+                    <h4 class="user-profile__email"><%= riskmeter[(riskmeter.length)-1].email %></h4>
+                </div>
+                <div class="user-profile__riskmeter__div">
+                    <label>Riskmeter:</label>
+                    <h2 class="user-profile__riskmeter"><%= riskmeter[(riskmeter.length)-1].riskmeter %></h2>
+                    <p class="user-profile__riskmeter">High risk, Please book an appointment at the nearest clinic to get tested.</p>
+                </div>
+                <div class="user-profile__action">
+                    <a type="button" class="btn" href='/appointment'>Book Appointment</a>
+                </div>          
+                
+            </article>
+        </div> 
+    </main>
+    
+<%- include('includes/end.ejs') %>
+
+
+
+    

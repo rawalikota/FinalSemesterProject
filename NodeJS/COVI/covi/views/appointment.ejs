@@ -1,0 +1,48 @@
+<%- include('includes/head.ejs') %>
+    <link rel="stylesheet" href="/css/product.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <nav class="main-header__nav">
+            <ul class="main-header__item-list">
+                <li class="main-header__item"><a  href="/">Home</a></li>
+                <li class="main-header__item"><a href="/appointment">Appointment</a></li>
+    
+            </ul>
+    
+            
+            <ul class="main-header__item-list">
+                
+                <li class="main-header__item">
+                    <a href="/Logout">Logout</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+    
+
+    <main>
+        <form class="login-form" action="/appointment" method="POST" >
+
+            <div class="form-control">
+                <p>Hospital 1</p>
+                <div class="form-control">
+                    <label for="adate">Appointment Date::    <input type="date" name="adate" id="adate" required>
+                    </label>  
+                </div>
+                <div class="form-control">
+                    <label for="atime">Appointment Time:    <input type="datetime" name="atime" id="atime" required>
+                    </label>
+                </div>
+                <div class="form-control">
+                    <label for="email">E-Mail:  <input type="email" name="aemail" id="aemail" required>
+                    </label>
+                </div>
+            </div>
+            <button class="btn" type="submit" >Confirm Appointment</button>
+        </form>
+    </main>
+    
+<%- include('includes/end.ejs') %>
